@@ -1,15 +1,20 @@
-version: '3.1'
+version: '3.5'
 
 services:
 
   db:
+    container_name: postgres
     image: postgres:15beta2-alpine
     restart: always
+    ports: 
+      - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: demo
+      - POSGRES_USER=root
+      - POSTGRES_PASSWORD=secret
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+    
