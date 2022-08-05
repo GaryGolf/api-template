@@ -1,26 +1,16 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "esnext",
-    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
     "sourceMap": true,
-    "outDir": "dist",
-    "allowJs": true,
-    "lib": ["dom", "es6"],
-    "baseUrl": "./src",
-    "paths": {
-      "*": ["*", "src/*"],
-    }
-  },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "include": [
-    "src/**/*.ts",
-    "tests/**/*.spec.ts"
-  ],
-  "files": [
-    "src/index.ts"
-  ]
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true
+  }
 }
